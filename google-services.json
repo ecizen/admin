@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "358251908952",
+    "project_id": "nextgen-d0944",
+    "storage_bucket": "nextgen-d0944.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358251908952:android:09428c845362c457ec1f2d",
+        "android_client_info": {
+          "package_name": "com.nextgen.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwuJvFq1GWF1aXDoJWuPwfdDO75Do6ALE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,121 @@
+import { View, Text, StyleSheet, TouchableOpacity, Image, TextInput } from 'react-native'
+import React,{useState} from 'react'
+import ordeIcon from '../../Image/Orderfood.png'
+import Customer from '../component/customer'
+
+export default function Dashboard() {
+  const [modalVisible, setModalVisible] = useState(false);
+    const Data = [
+        {
+            id: 1,
+            nama: 'nomer 1',
+        },
+        {
+            id: 2,
+            nama: 'nomer 1',
+        },
+        {
+            id: 3,
+            nama: 'nomer 1',
+        },
+        {
+            id: 4,
+            nama: 'nomer 1',
+        },
+        {
+            id: 5,
+            nama: 'nomer 1',
+        },
+        {
+            id: 6,
+            nama: 'nomer 1',
+        },
+    ];
+    
+    
+  return (
+    <View style={styles.container}>
+      <View style={styles.content}>
+        <Text style={styles.title} className="text-green-600">Orders</Text>
+        <Text style={styles.subtitle}>Click to see the details</Text>
+      </View>
+      <View style={styles.action}>
+        <TouchableOpacity style={styles.orderBtn}>
+            <Image source={ordeIcon} style={{width: 30, height: 30}}/>
+            <Text style={{fontSize: 20, color: 'black', fontWeight: '700'}}>Incoming Order</Text>
+        </TouchableOpacity>
+        <View style={{position: 'relative', justifyContent: 'center'}}>
+           <TextInput style={styles.search} placeholder='search here'></TextInput>
+           <Image source={require('../../Image/search.png')} style={{width: 24, height: 24, position: 'absolute', marginLeft: 10}}/>
+        </View>
+      </View>
+        <View style={{marginTop: 20}}>
+          <Customer/>
+        </View>
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+  container:{
+    paddingHorizontal: 24,
+    flex: 1,
+    backgroundColor: 'white'
+  },
+  content:{
+    marginTop: 0
+  },
+  title:{
+    fontSize: 32,
+    fontWeight: 'bold',
+  
+  },
+  subtitle:{
+    fontSize: 24,
+    fontWeight: '',
+    color: 'gray',
+    marginTop: 5
+  },
+  action:{
+    flexDirection: 'row',
+    marginTop: 20,
+    justifyContent: 'space-between',
+    
+    gap: 10,
+  },
+  orderBtn:{
+    
+    height: 60,
+    backgroundColor: '#D1EAFF',
+    borderRadius: 10,
+    flexDirection: 'row',
+    gap: 10,
+    paddingHorizontal:20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 1,
+    shadowOffset:5
+  },
+  search:{
+    width: 250,
+    height: 60,
+    paddingLeft: 40,
+    fontSize: 20,
+    shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 1,
+},
+shadowOpacity: 0.20,
+shadowRadius: 1.41,
+
+elevation: 1,
+    shadowOffset:5,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    color: 'black',
+    fontWeight: '700',
+  }
+  
+})
+
